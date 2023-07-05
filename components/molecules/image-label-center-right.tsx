@@ -10,9 +10,13 @@ interface ImageLabelCenterRightProps {
 
 const ImageLabelCenterRight: React.FC<ImageLabelCenterRightProps> = ({ imageUrl, altText, label }) => {
   return (
-    <div>
+    <div className='relative h-[30vh] w-1/2 flex-none md:w-1/3'>
       <Image src={imageUrl} alt={altText} />
-      <Label>{label}</Label>
+      <div className='absolute inset-y-0 right-0 flex items-center justify-center'>
+        <div className='inline-flex bg-white p-4 text-xl font-semibold text-black dark:bg-black dark:text-white'>
+          {label}
+        </div>
+      </div>
     </div>
   );
 }
