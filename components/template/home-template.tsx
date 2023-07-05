@@ -47,8 +47,8 @@ const HomeTemplate: React.FC<HomeTemplateProps> = ({ leftProduct, rightTopProduc
             <CarouselProducts items={carouselProducts} />
           </div>
         </div>
+        <Footer />
       </main>
-      <Footer />
     </>
   );
 }
