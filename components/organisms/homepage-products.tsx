@@ -26,7 +26,7 @@ interface HomePageProductsProps {
 
 const HomePageProducts: React.FC<HomePageProductsProps> = ({ leftProduct, rightTopProduct, rightDownProduct }) => {
   return (
-    <div>
+    <section className='lg:grid lg:grid-cols-6 lg:grid-rows-2'>
       <div className="lg:col-span-4 lg:row-span-2">
         <HeadingWithTextAndImage heading={leftProduct.heading} text={leftProduct.text} imageUrl={leftProduct.imageUrl} altText={leftProduct.altText} />
       </div>
@@ -36,7 +36,7 @@ const HomePageProducts: React.FC<HomePageProductsProps> = ({ leftProduct, rightT
       <div className="lg:col-span-2 lg:row-span-1">
         <HeadingWithTextAndImage heading={rightDownProduct.heading} text={rightDownProduct.text} imageUrl={rightDownProduct.imageUrl} altText={rightDownProduct.altText} />
       </div>
-    </div>
+    </section>
   );
 }
 
