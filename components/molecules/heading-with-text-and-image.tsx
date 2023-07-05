@@ -12,8 +12,8 @@ const HeadingWithTextAndImage: React.FC<HeadingWithTextAndImageProps> = ({ headi
   return (
     <div>
       <Image src={imageUrl} alt={altText} />
-      <h3 htmlFor="heading">{heading}</h3>
-      <p htmlFor="text">{text}</p>
+      <h3>{heading}</h3>
+      <p>{text}</p>
     </div>
   );
 };

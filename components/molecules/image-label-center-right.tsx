@@ -12,7 +12,7 @@ const ImageLabelCenterRight: React.FC<ImageLabelCenterRightProps> = ({ imageUrl,
   return (
     <div>
       <Image src={imageUrl} alt={altText} />
-      <Label htmlFor="label">{label}</Label>
+      <Label>{label}</Label>
     </div>
   );
 }
