@@ -12,7 +12,7 @@ const InputText: FC<InputTextProps> = ({ value, placeholder, onChange }) => {
   };
 
   return (
-    <input
+    <input className='w-full px-4 py-2 text-black dark:bg-black dark:text-gray-100'
       type="text"
       value={value}
       placeholder={placeholder}

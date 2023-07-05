@@ -20,13 +20,13 @@ const SearchForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='relative m-0 flex w-full items-center border border-gray-200 bg-transparent p-0 dark:border-gray-500'>
       <InputText
         value={searchText}
         placeholder="Search for products..."
         onChange={handleInputChange}
       />
-      <div>
+      <div className='absolute right-0 top-0 mr-3 flex h-full items-center'>
         <SearchIcon />
       </div>
     </form>

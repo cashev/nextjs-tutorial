@@ -32,7 +32,7 @@ interface HomeTemplateProps {
 
 const HomeTemplate: React.FC<HomeTemplateProps> = ({ leftProduct, rightTopProduct, rightDownProduct, carouselProducts }) => {
   return (
-    <div>
+    <>
       <Header />
       <main>
         <div>
@@ -49,7 +49,7 @@ const HomeTemplate: React.FC<HomeTemplateProps> = ({ leftProduct, rightTopProduc
         </div>
       </main>
       <Footer />
-    </div>
+    </>
   );
 }
 
