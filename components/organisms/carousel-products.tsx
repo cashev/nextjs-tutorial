@@ -13,7 +13,7 @@ const CarouselProducts: React.FC<CarouselProductsProps> = ({ items }) => {
   return (
     <div className='relative w-full overflow-hidden bg-black dark:bg-white'>
       <div className='flex animate-carousel'>
-        {items.map((item, index) => (
+        {[...items, ...items].map((item, index) => (
           <ImageLabelCenterRight key={index} imageUrl={item.imageUrl} altText={item.altText} label={item.label} />
         ))}
       </div>
