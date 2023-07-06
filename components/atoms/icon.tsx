@@ -8,8 +8,8 @@ interface IconProps {
   fill?: string;
   stroke?: string;
   strokeWidth?: string;
-  strokeLinecap?: string;
-  strokeLinejoin?: string;
+  strokeLinecap?: "butt" | "round" | "square" | "inherit";
+  strokeLinejoin?: "round" | "inherit" | "miter" | "bevel";
   children: React.ReactNode;
 }
 
