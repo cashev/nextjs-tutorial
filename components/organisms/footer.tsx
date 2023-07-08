@@ -4,15 +4,6 @@ import LogoIcon from "../molecules/logo-icon";
 import GithubIcon from "../molecules/github-icon";
 import VercelIcon from "../molecules/vercel-icon";
 
-
-interface FooterProps {
-  topHref: string;
-  topText: string;
-  gitHubImageUrl: string;
-  gitHubImageAltText: string;
-  gitHubHref: string;
-}
-
 const links = [
   { "href": "/", "text": "Home" },
   { "href": "/about", "text": "About" },
@@ -22,9 +13,7 @@ const links = [
   { "href": "/frequently-asked-questions", "text": "FAQ" },
 ];
 
-const Footer: React.FC<FooterProps> = ({
-  gitHubImageUrl,
-}) => {
+const Footer: React.FC = () => {
   return (
     <footer className="border-t border-gray-700 bg-white text-black dark:bg-black dark:text-white">
       <div className="mx-auto w-full max-w-7xl px-6">

@@ -1,53 +1,49 @@
 import React from 'react';
 import HomeTemplate from '../template/home-template';
 
-const leftProduct = {
-  heading: 'Acme T-Shirt',
-  text: '$20.00 USD',
-  imageUrl: 'https://via.placeholder.com/1080x1080',
+const firstProduct = {
+  image: 'https://loremflickr.com/1080/1080',
+  productName: 'Acme T-Shirt',
+  price: '$20.00 USD',
 };
 
-const rightTopProduct = {
-  heading: 'Acme Cup',
-  text: '$15.00 USD',
-  imageUrl: 'https://via.placeholder.com/1080x1080',
+const secondProduct = {
+  image: 'https://loremflickr.com/1080/1080',
+  productName: 'Acme Cup',
+  price: '$15.00 USD',
 };
 
-const rightDownProduct = {
-  heading: 'Acme Rainbow Sticker',
-  text: '$4.00 USD',
-  imageUrl: 'https://via.placeholder.com/1080x1080',
+const thirdProduct = {
+  image: 'https://loremflickr.com/1080/1080',
+  productName: 'Acme Rainbow Sticker',
+  price: '$4.00 USD',
 };
 
 const carouselProducts = [
   {
-    imageUrl: 'https://via.placeholder.com/1080x1080',
-    altText: 'Acme Mug',
-    label: 'Acme Mug',
+    image: 'https://loremflickr.com/1080/1080',
+    productName: 'Acme Mug',
   },
   {
-    imageUrl: 'https://via.placeholder.com/1080x1080',
-    altText: 'Acme Hoodie',
-    label: 'Acme Hoodie',
+    image: 'https://loremflickr.com/1080/1080',
+    productName: 'Acme Hoodie',
   },
   {
-    imageUrl: 'https://via.placeholder.com/1080x1080',
-    altText: 'Acme Baby Onesie',
-    label: 'Acme Baby Onesie',
+    image: 'https://loremflickr.com/1080/1080',
+    productName: 'Acme Baby Onesie',
   },
   {
-    imageUrl: 'https://via.placeholder.com/1080x1080',
-    altText: 'Acme Baby Cap',
-    label: 'Acme Baby Cap',
+    image: 'https://loremflickr.com/1080/1080',
+    productName: 'Acme Baby Cap',
   },
 ];
 
 const HomePage: React.FC = () => {
   return (
     <HomeTemplate
-      leftProduct={leftProduct}
-      rightTopProduct={rightTopProduct}
-      rightDownProduct={rightDownProduct}
+      firstProduct={firstProduct}
+      secondProduct={secondProduct}
+      thirdProduct={thirdProduct}
       carouselProducts={carouselProducts}
     />
   )

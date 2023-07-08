@@ -5,48 +5,38 @@ import HomePageProducts from '../organisms/homepage-products';
 import CarouselProducts from '../organisms/carousel-products';
 
 interface HomeTemplateProps {
-  leftProduct: {
-    heading: string;
-    text: string;
-    imageUrl: string;
-    altText: string;
+  firstProduct: {
+    image: string;
+    productName: string;
+    price: string;
   };
-  rightTopProduct: {
-    heading: string;
-    text: string;
-    imageUrl: string;
-    altText: string;
+  secondProduct: {
+    image: string;
+    productName: string;
+    price: string;
   };
-  rightDownProduct: {
-    heading: string;
-    text: string;
-    imageUrl: string;
-    altText: string;
+  thirdProduct: {
+    image: string;
+    productName: string;
+    price: string;
   };
   carouselProducts: {
-    imageUrl: string;
-    altText: string;
-    label: string;
+    image: string;
+    productName: string;
   }[];
 };
 
-const HomeTemplate: React.FC<HomeTemplateProps> = ({ leftProduct, rightTopProduct, rightDownProduct, carouselProducts }) => {
+const HomeTemplate: React.FC<HomeTemplateProps> = ({ firstProduct, secondProduct, thirdProduct, carouselProducts }) => {
   return (
     <>
       <Header />
       <main>
-        <div>
-          <div>
-            <HomePageProducts
-              leftProduct={leftProduct}
-              rightTopProduct={rightTopProduct}
-              rightDownProduct={rightDownProduct}
-            />
-          </div>
-          <div>
-            <CarouselProducts items={carouselProducts} />
-          </div>
-        </div>
+        <HomePageProducts
+          firstProduct={firstProduct}
+          secondProduct={secondProduct}
+          thirdProduct={thirdProduct}
+        />
+        <CarouselProducts products={carouselProducts} />
         <Footer />
       </main>
     </>

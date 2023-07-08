@@ -4,37 +4,34 @@ import HeadingWithTextAndImage from '../molecules/heading-with-text-and-image';
 // TODO Linkがない
 
 interface HomePageProductsProps {
-  leftProduct: {
-    heading: string;
-    text: string;
-    imageUrl: string;
-    altText: string;
+  firstProduct: {
+    image: string;
+    productName: string;
+    price: string;
   };
-  rightTopProduct: {
-    heading: string;
-    text: string;
-    imageUrl: string;
-    altText: string;
+  secondProduct: {
+    image: string;
+    productName: string;
+    price: string;
   };
-  rightDownProduct: {
-    heading: string;
-    text: string;
-    imageUrl: string;
-    altText: string;
+  thirdProduct: {
+    image: string;
+    productName: string;
+    price: string;
   };
 };
 
-const HomePageProducts: React.FC<HomePageProductsProps> = ({ leftProduct, rightTopProduct, rightDownProduct }) => {
+const HomePageProducts: React.FC<HomePageProductsProps> = ({ firstProduct, secondProduct, thirdProduct }) => {
   return (
     <section className='lg:grid lg:grid-cols-6 lg:grid-rows-2'>
       <div className="lg:col-span-4 lg:row-span-2">
-        <HeadingWithTextAndImage heading={leftProduct.heading} text={leftProduct.text} imageUrl={leftProduct.imageUrl} altText={leftProduct.altText} />
+        <HeadingWithTextAndImage heading={firstProduct.productName} text={firstProduct.price} imageUrl={firstProduct.image} altText={firstProduct.productName} />
       </div>
       <div className="lg:col-span-2 lg:row-span-1">
-        <HeadingWithTextAndImage heading={rightTopProduct.heading} text={rightTopProduct.text} imageUrl={rightTopProduct.imageUrl} altText={rightTopProduct.altText} />
+        <HeadingWithTextAndImage heading={secondProduct.productName} text={secondProduct.price} imageUrl={secondProduct.image} altText={secondProduct.productName} />
       </div>
       <div className="lg:col-span-2 lg:row-span-1">
-        <HeadingWithTextAndImage heading={rightDownProduct.heading} text={rightDownProduct.text} imageUrl={rightDownProduct.imageUrl} altText={rightDownProduct.altText} />
+        <HeadingWithTextAndImage heading={thirdProduct.productName} text={thirdProduct.price} imageUrl={thirdProduct.image} altText={thirdProduct.productName} />
       </div>
     </section>
   );

@@ -3,18 +3,17 @@ import ImageLabelCenterRight from '../molecules/image-label-center-right';
 
 interface CarouselProductsProps {
   products: {
-    imageUrl: string;
-    altText: string;
-    label: string;
+    image: string;
+    productName: string;
   }[];
 };
 
-const CarouselProducts: React.FC<CarouselProductsProps> = ({ items }) => {
+const CarouselProducts: React.FC<CarouselProductsProps> = ({ products }) => {
   return (
     <div className='relative w-full overflow-hidden bg-black dark:bg-white'>
       <div className='flex animate-carousel'>
-        {[...items, ...items].map((item, index) => (
-          <ImageLabelCenterRight key={index} imageUrl={item.imageUrl} altText={item.altText} label={item.label} />
+        {[...products, ...products].map((product, index) => (
+          <ImageLabelCenterRight key={index} imageUrl={product.image} altText={product.productName} label={product.productName} />
         ))}
       </div>
     </div>
