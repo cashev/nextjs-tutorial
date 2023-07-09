@@ -6,21 +6,25 @@ import CarouselProducts from '../organisms/carousel-products';
 
 interface HomeTemplateProps {
   firstProduct: {
+    url: string;
     image: string;
     productName: string;
     price: string;
   };
   secondProduct: {
+    url: string;
     image: string;
     productName: string;
     price: string;
   };
   thirdProduct: {
+    url: string;
     image: string;
     productName: string;
     price: string;
   };
   carouselProducts: {
+    url: string;
     image: string;
     productName: string;
   }[];

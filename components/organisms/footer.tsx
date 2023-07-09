@@ -2,7 +2,9 @@ import React from "react";
 import Link from "next/link";
 import LogoIcon from "../molecules/logo-icon";
 import GithubIcon from "../molecules/github-icon";
-import VercelIcon from "../molecules/vercel-icon";
+import Label from "../atoms/label";
+import CopyRight from "../molecules/copyright";
+import Credit from "../molecules/credit";
 
 const links = [
   { "href": "/", "text": "Home" },
@@ -23,7 +25,7 @@ const Footer: React.FC = () => {
               <span className="mr-2">
                 <LogoIcon />
               </span>
-              <span>Acme Store</span>
+              <Label tagName="span" text="Acme Store" />
             </Link>
           </div>
           <nav className="col-span-1 lg:col-span-7">
@@ -44,13 +46,8 @@ const Footer: React.FC = () => {
           </div>
         </div>
         <div className="flex flex-col items-center justify-between space-y-4 pb-10 pt-6 text-sm md:flex-row">
-            <p>© 2023 Acme Store. All rights reserved.</p>
-            <div className="flex items-center text-sm text-white dark:text-black">
-              <span className="text-black dark:text-white">Created by</span>
-              <a rel="noopener noreferrer" href="https://vercel.com" aria-label="Vercel.com Link" target="_blank" className="text-black dark:text-white">
-                <VercelIcon />
-              </a>
-            </div>
+            <CopyRight />
+            <Credit />
           </div>
       </div>
     </footer>

@@ -1,11 +1,14 @@
 import React from 'react';
 
 interface LabelProps {
-  children: React.ReactNode;
+  tagName: string;
+  className?: string;
+  text: string;
 };
 
-const Label: React.FC<LabelProps> = ({ children }) => {
-  return <div >{children}</div>;
+const Label: React.FC<LabelProps> = ({ tagName, className, text }) => {
+  const Tag = tagName as keyof JSX.IntrinsicElements;
+  return <Tag className={className} >{text}</Tag>;
 }
 
 export default Label;
