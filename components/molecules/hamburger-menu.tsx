@@ -11,10 +11,6 @@ const HamburgerMenu: React.FC = () => {
     setIsOpen(!isOpen);
   };
 
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
-
   return (
     <div className='block w-1/3 md:hidden'>
       <Button onClick={handleClick}>
