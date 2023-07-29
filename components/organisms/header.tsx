@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import LogoIcon from '../molecules/logo-icon';
 import SearchForm from '../molecules/search-form';
 import CartButton from '../molecules/cart-button';
+import HamburgerMenu from '../molecules/hamburger-menu';
 
 const categories = [
   { "href": "/search", "text": "All" },
@@ -13,6 +14,7 @@ const categories = [
 const Header: React.FC = () => {
   return (
     <nav className="relative flex items-center justify-between bg-white p-4 dark:bg-black lg:px-6">
+      <HamburgerMenu />
       <div className='flex justify-self-center md:w-1/3 md:justify-self-start'>
         <div className='md:mr-4'>
           <LogoIcon />
