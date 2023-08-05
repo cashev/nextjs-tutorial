@@ -1,12 +1,12 @@
 import React from 'react';
 
-type ButtonProps = {
-  children: React.ReactNode;
-  color: 'red' | 'blue' | 'green';
-  size: 'small' | 'medium' | 'large';
-  disabled: boolean;
-  onClick: () => void;
-};
+// type ButtonProps = {
+//   children: React.ReactNode;
+//   color: 'red' | 'blue' | 'green';
+//   size: 'small' | 'medium' | 'large';
+//   disabled: boolean;
+//   onClick: () => void;
+// };
 
 const Button = ({
   children,
@@ -14,7 +14,7 @@ const Button = ({
   size,
   disabled,
   onClick,
-}: ButtonProps) => {
+}) => {
   const handleClick = () => {
     if (!disabled) {
       onClick();

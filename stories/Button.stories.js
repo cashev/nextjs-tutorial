@@ -1,8 +1,54 @@
-import { Button } from './Button';
+// import { Button } from './Button';
 
-// More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
+// // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
+// export default {
+//   title: 'Example/Button',
+//   component: Button,
+//   parameters: {
+//     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
+//     layout: 'centered',
+//   },
+//   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
+//   tags: ['autodocs'],
+//   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
+//   argTypes: {
+//     backgroundColor: { control: 'color' },
+//   },
+// };
+
+// // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
+// export const Primary = {
+//   args: {
+//     primary: true,
+//     label: 'Button',
+//   },
+// };
+
+// export const Secondary = {
+//   args: {
+//     label: 'Button',
+//   },
+// };
+
+// export const Large = {
+//   args: {
+//     size: 'large',
+//     label: 'Button',
+//   },
+// };
+
+// export const Small = {
+//   args: {
+//     size: 'small',
+//     label: 'Button',
+//   },
+// };
+
+
+import Button from '../components/button/button';
+
 export default {
-  title: 'Example/Button',
+  title: 'Button',
   component: Button,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
@@ -10,36 +56,34 @@ export default {
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
-  // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    backgroundColor: { control: 'color' },
+};
+
+export const Apply = {
+  args: {
+    children: '応募する',
+    color: 'green',
+    size: 'medium',
+    disabled: false,
+    onclick: () => { console.log('応募しました'); },
   },
 };
 
-// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Primary = {
+export const Delete = {
   args: {
-    primary: true,
-    label: 'Button',
-  },
-};
-
-export const Secondary = {
-  args: {
-    label: 'Button',
-  },
-};
-
-export const Large = {
-  args: {
-    size: 'large',
-    label: 'Button',
-  },
-};
-
-export const Small = {
-  args: {
+    children: '削除する',
+    color: 'red',
     size: 'small',
-    label: 'Button',
+    disabled: false,
+    onclick: () => { alert('削除しました'); },
+  },
+};
+
+export const DeleteDisabled = {
+  args: {
+    children: '削除する',
+    color: 'red',
+    size: 'small',
+    disabled: true,
+    onclick: () => { alert('削除しました'); },
   },
 };
