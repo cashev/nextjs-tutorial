@@ -1,4 +1,5 @@
 import Button from '../components/button/button';
+import { action } from '@storybook/addon-actions';
 
 export default {
   title: 'Button',
@@ -9,6 +10,19 @@ export default {
   },
   // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/react/writing-docs/autodocs
   tags: ['autodocs'],
+  argTypes: {
+    children: { type: 'text' },
+    color: {
+      type: 'select',
+      options: ['red', 'blue', 'green'],
+    },
+    size: {
+      type: 'select',
+      options: ['small', 'medium', 'large'],
+    },
+    disabled: { control: 'boolean' },
+    onClick: { action: 'clicked' }
+  },
 };
 
 export const Apply = {
@@ -17,7 +31,7 @@ export const Apply = {
     color: 'green',
     size: 'medium',
     disabled: false,
-    onclick: () => { console.log('応募しました'); },
+    onClick: action('応募しました'),
   },
 };
 
@@ -27,7 +41,7 @@ export const Delete = {
     color: 'red',
     size: 'small',
     disabled: false,
-    onclick: () => { alert('削除しました'); },
+    onClick: action('削除しました'),
   },
 };
 
@@ -37,6 +51,6 @@ export const DeleteDisabled = {
     color: 'red',
     size: 'small',
     disabled: true,
-    onclick: () => { alert('削除しました'); },
+    onClick: action('削除しました'),
   },
 };
